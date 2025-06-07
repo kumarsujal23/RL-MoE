@@ -1,0 +1,194 @@
+================================================================================
+ENHANCED INDIVIDUAL EXPERT PERFORMANCE EVALUATION
+================================================================================
+OneClassSVM_Optimized: P=0.338, R=0.437, F1=0.381, Spec=0.823, NPV=0.876, AUC=0.276
+                      TP= 317, TN=2880, FP= 621, FN= 409
+IsolationForest_Enhanced: P=0.326, R=0.468, F1=0.384, Spec=0.799, NPV=0.879, AUC=0.270
+                      TP= 340, TN=2798, FP= 703, FN= 386
+LSTM_Autoencoder    : P=0.361, R=0.200, F1=0.257, Spec=0.927, NPV=0.848, AUC=0.428
+                      TP= 145, TN=3244, FP= 257, FN= 581
+VAE_Detector        : P=0.318, R=0.393, F1=0.351, Spec=0.825, NPV=0.868, AUC=0.274
+                      TP= 285, TN=2889, FP= 612, FN= 441
+Conv_Autoencoder    : P=0.304, R=0.384, F1=0.339, Spec=0.817, NPV=0.865, AUC=0.320
+                      TP= 279, TN=2861, FP= 640, FN= 447
+
+================================================================================
+DETAILED EXPERT ANALYSIS
+================================================================================
+🏆 Performance Leaders:
+  Best F1 Score:    IsolationForest_Enhanced (F1=0.384)
+  Best Precision:   LSTM_Autoencoder     (P=0.361)
+  Best Recall:      IsolationForest_Enhanced (R=0.468)
+
+📊 Expert Diversity Metrics:
+  F1 Score Range:     0.257 - 0.384 (std: 0.046)
+  Precision Range:    0.304 - 0.361 (std: 0.019)
+  Recall Range:       0.200 - 0.468 (std: 0.093)
+
+🔄 Expert Complementarity Analysis:
+  OneClassSVM_Optimized vs IsolationForest_Enhanced: Agreement=0.942, Unique detections: 24/47
+  OneClassSVM_Optimized vs LSTM_Autoencoder: Agreement=0.766, Unique detections: 212/40
+  OneClassSVM_Optimized vs VAE_Detector   : Agreement=0.906, Unique detections: 71/39
+  OneClassSVM_Optimized vs Conv_Autoencoder: Agreement=0.858, Unique detections: 103/65
+  IsolationForest_Enhanced vs LSTM_Autoencoder: Agreement=0.758, Unique detections: 230/35
+  IsolationForest_Enhanced vs VAE_Detector   : Agreement=0.892, Unique detections: 87/32
+  IsolationForest_Enhanced vs Conv_Autoencoder: Agreement=0.891, Unique detections: 99/38
+  LSTM_Autoencoder vs VAE_Detector   : Agreement=0.778, Unique detections: 38/178
+  LSTM_Autoencoder vs Conv_Autoencoder: Agreement=0.790, Unique detections: 32/166
+  VAE_Detector    vs Conv_Autoencoder: Agreement=0.918, Unique detections: 47/41
+
+🎯 Expert Reliability vs Performance:
+  OneClassSVM_Optimized: Reliability=0.262, F1=0.381, Rel*F1=0.100
+  IsolationForest_Enhanced: Reliability=0.950, F1=0.384, Rel*F1=0.365
+  LSTM_Autoencoder    : Reliability=1.000, F1=0.257, Rel*F1=0.257
+  VAE_Detector        : Reliability=0.979, F1=0.351, Rel*F1=0.344
+  Conv_Autoencoder    : Reliability=1.000, F1=0.339, Rel*F1=0.339
+
+🤖 MoE Potential Analysis:
+  Best Individual F1:     0.384
+  Oracle Ensemble F1:     0.707
+  Improvement Potential:  0.323 (84.0%)
+  ✅ High MoE potential - experts are complementary!
+✅ Enhanced evaluation completed with reliability metrics
+================================================================================
+TRUE DYNAMIC ROUTING RL-MoE MODEL EVALUATION
+================================================================================
+Running TRUE DYNAMIC ROUTING inference...
+Each sample gets individual expert weight decisions based on its characteristics...
+📊 Enhanced Performance Metrics:
+  Precision:    0.337
+  Recall:       0.435
+  F1 Score:     0.380
+  Specificity:  0.823
+  NPV:          0.875
+
+📋 Confusion Matrix:
+  True Positives (TP):   316
+  True Negatives (TN):  2880
+  False Positives (FP):  621
+  False Negatives (FN):  410
+
+📈 Detailed Classification Report:
+              precision    recall  f1-score   support
+
+      Normal       0.88      0.82      0.85      3501
+     Anomaly       0.34      0.44      0.38       726
+
+    accuracy                           0.76      4227
+   macro avg       0.61      0.63      0.61      4227
+weighted avg       0.78      0.76      0.77      4227
+
+
+🔄 TRUE DYNAMIC ROUTING ANALYSIS:
+  Average weight change per sample: 0.1363
+  Maximum weight change: 2.0000
+  Minimum weight change: 0.0000
+  ✅ TRUE DYNAMIC ROUTING: Weights adapt significantly to input characteristics
+     Agent successfully performs input-dependent expert selection
+
+🎯 Enhanced Expert Weight Analysis:
+  Expert                    Avg Weight   Std Dev    Min      Max      Usage %   
+  ------------------------- ------------ ---------- -------- -------- ----------
+  🔄 OneClassSVM_Optimized   0.154        0.215      0.000    1.000    15.4      %
+  📌 IsolationForest_Enhanced 0.005        0.033      0.000    0.387    0.5       %
+  🔄 LSTM_Autoencoder        0.075        0.157      0.000    0.558    7.5       %
+  📌 VAE_Detector            0.000        0.000      0.000    0.000    0.0       %
+  🔄 Conv_Autoencoder        0.766        0.318      0.000    1.000    76.6      %
+
+⚖️ Bias Analysis:
+  Max Average Weight:     0.766
+  Weight Entropy:         0.714
+  Bias Warnings:          0/4227 steps
+  ⚠️ MODERATE BIAS: Consider diversity improvements
+
+🎁 Reward Component Analysis:
+  Average Base Reward:      0.045
+  Average Diversity Bonus:  0.000
+  Average Entropy Bonus:    0.044
+
+📊 Prediction Distribution Analysis:
+  Actual Anomaly Rate:      17.18%
+  Predicted Anomaly Rate:   22.17%
+  Rate Difference:          4.99%
+
+🎯 Overall Dynamic Routing Assessment:
+  Overall Dynamic Score:    0.1445
+  🎉 EXCELLENT: TRUE dynamic routing achieved!
+     Different inputs receive significantly different expert combinations
+
+✅ TRUE Dynamic Routing RL-MoE evaluation completed!
+✅ TRUE Dynamic Routing evaluation completed
+ENHANCED COMPREHENSIVE PERFORMANCE ANALYSIS
+==========================================================================================
+🏆 Performance Comparison:
+  Best Individual Expert (IsolationForest_Enhanced): F1 = 0.384
+  Soft RL-MoE Router:                     F1 = 0.380
+  Absolute Improvement:                   -0.004
+  Relative Improvement:                   -1.1%
+
+📊 Enhanced Expert Utilization Statistics:
+  Expert               Avg      Std      Min      Max      Usage%   Rank  
+  -------------------- -------- -------- -------- -------- -------- ------
+  Conv_Autoencoder     0.766    0.318    0.000    1.000    76.6    % 1     
+  OneClassSVM_Optimized 0.154    0.215    0.000    1.000    15.4    % 2     
+  LSTM_Autoencoder     0.075    0.157    0.000    0.558    7.5     % 3     
+  IsolationForest_Enhanced 0.005    0.033    0.000    0.387    0.5     % 4     
+  VAE_Detector         0.000    0.000    0.000    0.000    0.0     % 5     
+
+🎯 Advanced Diversity Analysis:
+  Weight Entropy:           0.714 (max: 1.609)
+  Normalized Entropy:       0.444 (1.0 = perfect diversity)
+  Gini Coefficient:         -0.872 (0.0 = perfect equality)
+  Expert Diversity Score:   0.145
+
+⚖️ Bias and Fairness Analysis:
+  Dominant Expert:          Conv_Autoencoder (76.6%)
+  Bias Level:               🟡 MODERATE BIAS - Some expert preference
+
+📈 Performance vs Diversity Trade-off:
+  Performance Score (F1):   0.380
+  Diversity Score:          0.444
+  Combined Score:           0.412
+
+📊 Statistical Analysis:
+  Weight Deviation from Uniform: 0.289
+  Sample Size:                   4227
+  ✅ Statistically significant expert preferences detected
+
+🔬 Research Analysis:
+  Worst Expert F1:          0.257
+  Best Expert F1:           0.384
+  RL-MoE F1:                0.380
+  Improvement Efficiency:   96.6%
+
+
+📋 Enhanced Experiment Summary:
+  Dataset:                  Real NAB industrial time series (machine_temp)
+  Total test samples:       4,227
+  Number of experts:        5
+  Anomaly rate:             17.18%
+  Training approach:        Soft MoE with RL routing + bias prevention
+  Novel contributions:      Soft routing, diversity bonuses, bias monitoring
+✅ Enhanced comprehensive analysis completed with all metrics
+
+==========================================================================================
+🎉 ENHANCED SOFT RL-MoE ANOMALY DETECTION EXPERIMENT COMPLETED!
+==========================================================================================
+
+📊 Actual Research Results Summary:
+======================================================================
+Model                     Precision  Recall     F1-Score  
+======================================================================
+OneClassSVM_Optimized     0.338      0.437      0.381     
+IsolationForest_Enhanced  0.326      0.468      0.384     
+LSTM_Autoencoder          0.361      0.200      0.257     
+VAE_Detector              0.318      0.393      0.351     
+Conv_Autoencoder          0.304      0.384      0.339     
+RL-MoE                    0.337      0.435      0.380     
+======================================================================
+Best Individual Expert: IsolationForest_Enhanced
+Best F1 Score: 0.384
+RL-MoE F1 Score: 0.380
+Performance Gap: -0.004
+📈 CLOSE: RL-MoE nearly matches best expert performance
+✅ All plots saved using your actual data!
